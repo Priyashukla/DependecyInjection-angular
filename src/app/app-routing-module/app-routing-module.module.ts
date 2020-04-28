@@ -18,15 +18,16 @@ const appRoutes: Routes=[
   {path:"about",component:AboutComponent},
   {path:"users",
   canActivateChild:[AuthGuard],
-  resolve:{
-    users:UsersresolveGuard
-  },
+  //resolve:{
+   // users:UsersresolveGuard
+  //},
   component:UsersComponent,children:[
-    {path:':userid',component:UserDetailsComponent},
-    //{path:'',component:PlaceholderComponent}
+    {path:':id',component:UserDetailsComponent},
+    {path:'',component:PlaceholderComponent}
   ]},
+
   {path:"message",component:MessageComponent,canDeactivate:[ConfirmationGuard]},
-  { path:"",redirectTo:"/home",pathMatch:'full'}
+  //{ path:"",redirectTo:"/home",pathMatch:'full'}
 
 ]
 

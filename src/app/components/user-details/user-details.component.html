@@ -9,4 +9,5 @@
    <button class="btn btn-denger" (click)="deleteUser()">Delete User</button>
    <button class="btn btn-warning" (click)="getUserPosts()">Get Posts by User</button>
 
- 
+ <h4>User's Posts</h4>
+ <pre>{{posts|async|json}}</pre>
